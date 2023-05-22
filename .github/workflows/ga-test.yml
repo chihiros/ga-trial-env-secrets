@@ -1,0 +1,16 @@
+name: Environment の secrets と variables の違いを見るテスト
+on: push
+
+env:
+  THIS_IS_ENVIRONMENT_SECRETS: ${{ secrets.THIS_IS_ENVIRONMENT_SECRETS }}
+  THIS_IS_ENVIRONMENT_VARIABLES: ${{ secrets.THIS_IS_ENVIRONMENT_VARIABLES }}
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo THIS_IS_ENVIRONMENT_SECRETS
+        run: echo $THIS_IS_ENVIRONMENT_SECRETS
+    
+      - name: echo THIS_IS_ENVIRONMENT_VARIABLES
+        run: echo $THIS_IS_ENVIRONMENT_VARIABLES
