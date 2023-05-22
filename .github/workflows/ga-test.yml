@@ -4,6 +4,7 @@ on: push
 env:
   THIS_IS_ENVIRONMENT_SECRETS: ${{ secrets.THIS_IS_ENVIRONMENT_SECRETS }}
   THIS_IS_ENVIRONMENT_VARIABLES: ${{ secrets.THIS_IS_ENVIRONMENT_VARIABLES }}
+  TMP: "tmpです"
 
 jobs:
   echo:
